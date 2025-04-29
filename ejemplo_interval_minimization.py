@@ -35,7 +35,7 @@ def interval_halving(a, b, tol, max_iter):
 
 # Parámetros iniciales
 a, b = 0, 3
-tolerance = 0.01
+tolerance = 0.001
 max_iterations = 20
 
 # Ejecutar el método
