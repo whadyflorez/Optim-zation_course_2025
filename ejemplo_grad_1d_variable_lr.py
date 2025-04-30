@@ -16,7 +16,7 @@ def gradient_descent_var(x0, tol, max_iter):
     x = x0
     for i in range(1, max_iter+1):
         grad = df(x)
-        lr = 1.0 / np.sqrt(i)
+        lr = 0.25 / np.sqrt(i)
         iter_data.append((i-1, x, f(x), grad, lr))
         if abs(grad) < tol:
             break

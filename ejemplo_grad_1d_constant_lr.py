@@ -24,7 +24,7 @@ def gradient_descent_const(lr, x0, tol, max_iter):
 
 # Parámetros
 x0 = 0
-lr_const = 0.1
+lr_const = 0.25
 tolerance = 0.0001
 max_iterations = 50
 
