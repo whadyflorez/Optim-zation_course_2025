@@ -18,7 +18,7 @@ def grad_total_cost(x):
     dC_dT = -C_PM / T**2 + C_FAIL * lam * np.exp(-lam * T)
     return np.array([dC_dQ, dC_dT])
 
-x0 = np.array([400.0, 20.0])
+x0 = np.array([100.0, 2.0])
 
 path = []
 res = minimize(
@@ -26,7 +26,7 @@ res = minimize(
     method="Newton-CG",
     jac=grad_total_cost,
     callback=lambda xk: path.append(xk.copy()),
-    options={"ftol": 1e-12, "maxiter": 200},
+    options={"xtol": 1e-6, "maxiter": 200},
 )
 
 print("Optimal Q, T :", res.x)

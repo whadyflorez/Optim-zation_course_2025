@@ -79,7 +79,7 @@ def newton_linesearch(x0, tol=1e-8, max_iter=20):
             break
         H = hess_f(x)
         try:
-            p = -np.linalg.solve(H, g)
+            p = np.linalg.solve(H, -g)
         except np.linalg.LinAlgError:
             p = -g
         if np.dot(g, p) >= 0:
