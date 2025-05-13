@@ -27,10 +27,10 @@ def grad_f(x: np.ndarray) -> np.ndarray:
 
 def gradient_descent_line_search(
     x0: np.ndarray,
-    max_iter: int = 3,
-    alpha0: float = 1.0,
+    max_iter: int = 100,
+    alpha0: float = 0.01,
     rho: float = 0.5,
-    c: float = 1e-4,
+    c: float = 1e-8,
 ):
     """
     Gradient descent with Armijo back‑tracking line‑search.
