@@ -22,7 +22,7 @@ constraints = [
 
 # Bounds para cada variable: 0 ≤ x1 ≤ 5, 0 ≤ x2 ≤ 4, 1 ≤ x3 ≤ 3
 bounds = [
-    (0, None),
+    (0, 5),
     (0, 4),
     (1, 3)
 ]
